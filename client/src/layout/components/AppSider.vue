@@ -1,11 +1,11 @@
 <template>
-  <a-layout-sider width="256px"
-                  :class="appSiderClass"
-                  v-model="sidebar">
-    <router-link to="/dashboard">
-      <app-logo class="app-sider-logo"
-                :showTitle="!sidebar"></app-logo>
-    </router-link>
+  <a-layout-sider width="256"
+                  :class="siderClass"
+                  collapsible
+                  theme="light"
+                  v-model="collapsed">
+    <app-logo class="app-sider-logo"
+              :showTitle="!collapsed"></app-logo>
     <s-menu :menu="menus"
             class="app-sider-menu"
             mode="inline"></s-menu>
@@ -13,25 +13,30 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import { routerMap } from "@/route/config";
-import { AppMixin } from "@/mixins";
-import { mixins } from "vue-class-component";
-import SMenu from "@/components/Menu";
-import AppLogo from "./AppLogo.vue";
+import { Vue, Component, Mixins } from 'vue-property-decorator';
+import { routerMap } from '@/route/config';
+import { AppMixin } from '@/mixins';
+import SMenu from '@/components/Menu';
+import AppLogo from './AppLogo.vue';
+
+
 @Component({
   components: {
     SMenu,
     AppLogo
   }
 })
-export default class AppSider extends mixins(AppMixin) {
+export default class AppSider extends Mixins(AppMixin) {
+  collapsed = true
+
   get menus() {
     return routerMap[0].children;
   }
-
-  get appSiderClass() {
-    return ["app-sider", this.fixsidebar && "app-sider_fixed"];
+  get siderClass() {
+    return {
+      'app-sider': true,
+      'app-sider--fixed': true
+    }
   }
 }
 </script>

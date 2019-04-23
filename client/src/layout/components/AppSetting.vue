@@ -7,7 +7,6 @@
               :closable="false"
               :visible="visible"
               :getContainer="() => $refs.appSetting">
-
       <div class="setting-drawer-content">
         <div>
           <h3>整体风格设置</h3>

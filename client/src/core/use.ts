@@ -1,6 +1,5 @@
-import Vue from 'vue';
+import Vue from 'vue'
 
 // base library
-import Antd from 'ant-design-vue';
-Vue.use(Antd);
-    
+import Antd from 'ant-design-vue'
+Vue.use(Antd)

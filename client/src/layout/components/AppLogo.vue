@@ -1,15 +1,16 @@
 <template>
-  <div class="app-logo">
+  <router-link to="/dashboard"
+               class="app-logo">
     <div>
       <svg-icon name="logo"
                 width="2.5em"
                 height="2.5em"></svg-icon>
     </div>
     <span v-if="showTitle">Test Plaform</span>
-  </div>
+  </router-link>
 </template>
 <script lang="ts">
-import { Vue, Component, Prop, Mixins } from "vue-property-decorator";
+import { Vue, Component, Prop, Mixins } from 'vue-property-decorator';
 
 @Component
 export default class AppLogo extends Vue {
@@ -26,6 +27,8 @@ export default class AppLogo extends Vue {
   position: relative;
   display: flex;
   transition: all 0.3s;
+  text-decoration: none;
+
   svg {
     margin-right: 8px;
     // vertical-align: text-bottom;
