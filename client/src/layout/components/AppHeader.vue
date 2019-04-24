@@ -18,12 +18,12 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop, Mixins } from "vue-property-decorator";
-import { routerMap } from "@/route/config";
-import { AppMixin } from "@/mixins";
-import SMenu from "@/components/Menu";
-import UserMenu from "./UserMenu.vue";
-import AppLogo from "./AppLogo.vue";
+import { Vue, Component, Prop, Mixins } from 'vue-property-decorator';
+import { routerMap } from '@/route/config';
+import { AppMixin } from '@/mixins';
+import SMenu from '@/components/Menu';
+import UserMenu from './UserMenu.vue';
+import AppLogo from './AppLogo.vue';
 
 @Component({
   components: {
