@@ -31,7 +31,6 @@ export default class AppLogo extends Vue {
 
   svg {
     margin-right: 8px;
-    // vertical-align: text-bottom;
   }
   span {
     font-size: 20px;

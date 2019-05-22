@@ -1,6 +1,5 @@
 <template>
-  <a-layout class="app-layout"
-            :class="layoutClass">
+  <a-layout :class="layoutClass">
     <app-sider v-if="isSideMenu()"></app-sider>
     <div class="app-content">
       <app-header></app-header>
@@ -25,19 +24,8 @@ import { AppMixin } from '@/mixins';
 export default class BasicLayout extends Mixins(AppMixin) {
   get layoutClass() {
     return {
-      ...this.appClass
+      'app-layout': true,
     };
   }
 }
 </script>
-
-<style lang="less" scoped>
-.app-layout {
-  display: flex;
-  .app-content {
-    flex: 1;
-    min-height: 100%;
-    width: 100%;
-  }
-}
-</style>

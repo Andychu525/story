@@ -10,8 +10,4 @@ export default class AppMixin extends Vue {
   isSideMenu() {
     return !this.isTopMenu()
   }
-
-  get appClass() {
-    return {}
-  }
 }

@@ -6,9 +6,9 @@
                   v-model="collapsed">
     <app-logo class="app-sider-logo"
               :showTitle="!collapsed"></app-logo>
-    <s-menu :menu="menus"
+    <c-menu :menu="menus"
             class="app-sider-menu"
-            mode="inline"></s-menu>
+            mode="inline"></c-menu>
   </a-layout-sider>
 </template>
 
@@ -16,13 +16,13 @@
 import { Vue, Component, Mixins } from 'vue-property-decorator';
 import { routerMap } from '@/route/config';
 import { AppMixin } from '@/mixins';
-import SMenu from '@/components/Menu';
+import CMenu from '@/components/CMenu';
 import AppLogo from './AppLogo.vue';
 
 
 @Component({
   components: {
-    SMenu,
+    CMenu,
     AppLogo
   }
 })
