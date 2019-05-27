@@ -1,14 +1,4 @@
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
-import {
-  VList,
-  VListGroup,
-  VListTile,
-  VListTileContent,
-  VListTileTitle,
-  VListTileAction,
-  VSubheader,
-  VDivider
-} from 'vuetify/lib'
 
 interface Meta {
   title: string
