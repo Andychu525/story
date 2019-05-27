@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import AppLayout from './layout/AppLayout'
+import AppLayout from './layout'
+import Vscode from './vscode'
 
 Vue.use(Router)
 
@@ -11,15 +11,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: AppLayout,
-      redirect: '/home',
-      children: [
-        {
-          path: '/home',
-          name: 'Home',
-          component: Home
-        }
-      ]
+      name: '12',
+      component: AppLayout
+      // redirect: '/home',
+      // children: []
+    },
+    {
+      path: '/vscode',
+      name: 'vscode',
+      component: Vscode
+      // redirect: '/home',
+      // children: []
     }
   ]
 })
