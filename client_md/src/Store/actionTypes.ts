@@ -1,0 +1,3 @@
+// app
+export const TOGGLE_APP_DARK = 'TOGGLE_APP_DARK'
+export const TOGGLE_DRAWER_CLIPED = 'TOGGLE_DRAWER_CLIPED'

@@ -1,13 +1,14 @@
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator'
+import { Getter, Action } from 'vuex-class'
+import { DrawerState } from '@/Store/modules/app'
 
 @Component
 export default class AppHeader extends Vue {
-  @Prop({ type: Boolean, default: false })
-  clipped!: boolean
+  @Getter('drawer') darwer!: DrawerState
 
   render() {
     return (
-      <v-toolbar clipped-left={this.clipped} app absolute>
+      <v-toolbar clipped-left={this.darwer.clipped} app absolute>
         <v-toolbar-side-icon />
         <v-toolbar-title>Vuetify</v-toolbar-title>
       </v-toolbar>

@@ -22,15 +22,6 @@ export default class CMenu extends Vue {
   @Prop({ type: Array, required: true })
   menus!: Menu[]
 
-  // renderIcon(icon: any) {
-  //   if (icon === 'none' || icon === undefined) {
-  //     return null
-  //   }
-  //   const props: any = {}
-  //   typeof icon === 'object' ? (props.component = icon) : (props.type = icon)
-  //   return <Icon {...{ props }} />
-  // }
-
   renderSubHeader(menu: Menu) {
     return <v-sub-header>{menu.meta.title}</v-sub-header>
   }
@@ -61,7 +52,6 @@ export default class CMenu extends Vue {
   }
   renderSubMenu(menu: any) {
     const childern = menu.children.map((item: Menu) => {
-      console.error(item)
       return this.renderItem(item)
     })
 
