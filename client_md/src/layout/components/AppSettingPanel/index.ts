@@ -1,3 +1,3 @@
-import AppSettingPanel from './AppSettingPanel'
+import AppSettingPanel from './AppSettingPanel.vue'
 
 export default AppSettingPanel
